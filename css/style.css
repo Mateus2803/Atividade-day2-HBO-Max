@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter';
+    
+    background-color: #000;
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    
+}
+
+#transpatente {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+header{
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+   
+}
+
+#menuIcons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#menuIcons img {
+    width: 32px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+
+#menuIcons img:hover {
+    opacity: 0.5;
+}
+
+#logo {
+    width: 140px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#menu label {
+    margin-right: 45px;
+}
+
+header label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+header label:hover {
+    opacity: 0.5;
+}
+
+/* MAIN */
+
+main{ 
+    z-index: 10;
+    width: 439px;   
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 37px;
+}
+
+main span {
+    font-weight: 100;
+    font-size: 21px;
+    font-style: normal;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
+main form label {
+    font-size: 18px;
+    line-height: 55px;
+}
+
+main form input {
+    height: 40px;
+    background: rgba(127, 127, 127, 0.75);
+    border-radius: 20px;
+    border: 0;
+    padding: 0px 26px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+main .btn {
+    background: linear-gradient(90deg, #A18CD1 0%, #FBC2EB 100%);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: #121111;
+    font-size: 18px;
+    width: max-content;
+    height: 40px;
+    padding: 0 29px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+main form button{
+    width: 162px !important; 
+}
+
+main .btn:hover {
+    opacity: 0.7;
+}
+
+
+/* SIDE-BAR */
+
+#sideBar {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-right: 1px solid rgba(255, 255, 255, 0.85);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#logoSideBar {
+    width: 140px;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-bottom: 36px;
+}
+
+#serachSideBar{
+    width: calc(80% - 44px);
+    height: 40px;
+    background: rgba(127, 127, 127, 0.75);
+    border-radius: 20px;
+    border: 0;
+    padding: 0px 26px 0px 44px;
+    color: #FFF;
+    font-size: 18px;
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 12px 8px;
+}
+
+#serachSideBar::placeholder{
+    color:#FFF;
+}
+
+#sideBar #menuSidebar {
+    width: 100%;
+    text-align: left;
+    margin-top: 13px;
+}
+
+#sideBar #menuSidebar ul li {
+    color: #FFF;
+    list-style-type: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    cursor: pointer;
+    
+}
+
+#sideBar #menuSidebar ul li:hover {
+    opacity: 0.5;
+}
+
+#areaCloseSideBar {
+    position: absolute;
+    text-align: right;
+    width: 90%;
+    margin-top: 15px;
+}
+
+#closeSideBar {
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#closeSideBar:hover {
+    opacity: 0.5;
+}
+
+.closeSideBar {
+    left: -100%; 
+}
+
+.openSideBar {
+    left: 0;
+}
+
+
+#blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.blurOn {
+    z-index: 15;
+    opacity: 0.3;
+}
+
+.blurOff {
+    z-index: 0;
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-position: 87% 0;
+    }
+
+    #btnSearch { display: none; }
+
+    #menu { display: none; }
+
+}
+
+@media only screen and (max-width: 490px) { main { width: 90%; } }
